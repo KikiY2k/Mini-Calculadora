@@ -306,7 +306,7 @@ class ComplexCalculator:
 def main_entry_point():
     main_window = tk.Tk()
     calc_app = ComplexCalculator(main_window)
-    calc_pp.mainloop()
+    calc_app.mainloop()
 
 if __name__ == "__main__":
     main_entry_point()
