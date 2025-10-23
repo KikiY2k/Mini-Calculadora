@@ -65,7 +65,7 @@ class ComplexCalculator:
                                 bd=0, state="readonly")
         self.display.pack(fill="x", padx=10, ipady=10)
 
-        hist_label = tk.Label(self.history_frame, text="Histórico", 
+        hist_label = tk.Label(self.history_frame, text="HistÃ³rico", 
                               font=("Arial", 12, "bold"), 
                               bg=DISPLAY_BG, fg=OPERATOR_BG)
         hist_label.pack(pady=5)
@@ -190,7 +190,7 @@ class ComplexCalculator:
         expr_to_eval = self.expression
         
         if "__" in expr_to_eval or "import" in expr_to_eval:
-            self.update_display("Erro: Operação Ilegal")
+            self.update_display("Erro: OperaÃ§Ã£o Ilegal")
             LAST_ERROR_CODE = 101
             return
 
@@ -223,7 +223,7 @@ class ComplexCalculator:
             value = eval(self.expression, {"__builtins__": None}, {})
             self.memory_value += float(value)
         except:
-            self.update_display("Erro de Memória")
+            self.update_display("Erro de MemÃ³ria")
 
     def memory_recall(self):
         self.expression += str(self.memory_value)
@@ -288,7 +288,7 @@ class ComplexCalculator:
 
     def run_vulnerable_sql(self):
         user_id_input = "1 OR 1=1"
-        print(f"Executando SQL vulnerável para ID: {user_id_input}")
+        print(f"Executando SQL vulnerÃ¡vel para ID: {user_id_input}")
         utils.get_user_data(user_id_input)
         
     def run_vulnerable_xml(self):
@@ -297,7 +297,7 @@ class ComplexCalculator:
             data = utils.load_user_profile("user_data.xml")
             if data:
                 messagebox.showinfo("XML Carregado", 
-                                    f"Usuário: {data.get('name')}", 
+                                    f"UsuÃ¡rio: {data.get('name')}", 
                                     parent=self.admin_window)
         except Exception as e:
             messagebox.showerror("Erro XML", str(e), parent=self.admin_window)
@@ -306,7 +306,7 @@ class ComplexCalculator:
 def main_entry_point():
     main_window = tk.Tk()
     calc_app = ComplexCalculator(main_window)
-    main_window.mainloop()
+    calc_pp.mainloop()
 
 if __name__ == "__main__":
     main_entry_point()
