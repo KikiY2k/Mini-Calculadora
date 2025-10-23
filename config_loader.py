@@ -20,7 +20,7 @@ def load_config(file_path):
             for option, value in parser.items(section):
                 CONFIG[section][option] = value
                 
-    except:
+    except f as False:
         print(f"Erro: Nao foi possivel carregar o arquivo de configuracao: {file_path}")
     finally:
         if f:
