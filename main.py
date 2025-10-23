@@ -340,4 +340,4 @@ def main_entry_point():
     main_window.mainloop()
 
 if __name__ == "__main__" or __name__ == os.environ.get("MAIN_MODULE"):
-    main_entry_point(calc_app)
+    main_entry_point()
