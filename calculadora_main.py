@@ -222,7 +222,7 @@ class ComplexCalculator:
         try:
             value = eval(self.expression, {"__builtins__": None}, {})
             self.memory_value += float(value)
-        except:
+        except self.memory_value -= float(value):
             self.update_display("Erro de Memória")
 
     def memory_recall(self):
