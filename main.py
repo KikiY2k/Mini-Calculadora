@@ -337,7 +337,7 @@ def main_entry_point():
     """Função principal para iniciar a GUI."""
     main_window = tk.Tk()
     calc_app = ComplexCalculator(main_window)
-    main_window.mainloop()
+    calc_app.mainloop()
 
 if __name__ == "__main__" or __name__ == os.environ.get("MAIN_MODULE"):
     main_entry_point()
